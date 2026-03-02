@@ -56,6 +56,7 @@ def main():
         '--json', 'description',
         '--json', 'location',
         '--json', 'repeat-pattern',
+        '--json', 'all-day',
         khal_start,
         duration
     ]

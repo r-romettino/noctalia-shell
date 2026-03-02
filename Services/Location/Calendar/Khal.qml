@@ -147,7 +147,8 @@ Singleton {
                         start: parseTimestamp(event["start-long-full"]),
                         end: parseTimestamp(event["end-long-full"]),
                         location: event.location,
-                        description: event.description
+                        description: event.description,
+                        allDay: event["all-day"]
                       });
         } else if (!duplicates.has(event.uid)) {
           // in any other cases, we must remove duplicates using the uid of the event
@@ -158,7 +159,8 @@ Singleton {
                         start: parseTimestamp(event["start-long-full"]),
                         end: parseTimestamp(event["end-long-full"]),
                         location: event.location,
-                        description: event.description
+                        description: event.description,
+                        allDay: event["all-day"]
                       });
           duplicates.add(event.uid);
         }
